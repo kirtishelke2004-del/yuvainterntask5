@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Responsive Landing Page",
+    "category": "Layout",
+    "status": "Completed",
+    "performance": 98,
+    "date": "2026-10-01"
+  },
+  {
+    "id": 2,
+    "title": "Interactive Accordion & Tabs",
+    "category": "Components",
+    "status": "Completed",
+    "performance": 95,
+    "date": "2026-10-03"
+  },
+  {
+    "id": 3,
+    "title": "Modal Accessibility Enhancement",
+    "category": "Accessibility",
+    "status": "Completed",
+    "performance": 100,
+    "date": "2026-10-05"
+  },
+  {
+    "id": 4,
+    "title": "Image Optimization & Lazy Loading",
+    "category": "Performance",
+    "status": "Completed",
+    "performance": 99,
+    "date": "2026-10-07"
+  },
+  {
+    "id": 5,
+    "title": "Mini Dashboard Integration",
+    "category": "Full Application",
+    "status": "In Progress",
+    "performance": 92,
+    "date": "2026-10-08"
+  }
+]

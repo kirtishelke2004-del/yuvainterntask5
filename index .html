@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 - Mini Web Application Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-dashboard" class="skip-link">Skip to main content</a>
+
+    <!-- Application Header -->
+    <header class="app-header" role="banner">
+        <div class="header-container">
+            <h1 class="app-title">DevAnalytics Dashboard</h1>
+            <button id="themeToggleBtn" class="theme-btn" aria-pressed="false" aria-label="Toggle Dark Mode">
+                <span id="themeBtnText">🌙 Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-dashboard" class="dashboard-container" tabindex="-1">
+
+        <!-- Stat Summary Cards -->
+        <section class="summary-grid" aria-label="Dashboard Overview Metrics">
+            <div class="stat-card">
+                <h2>Total Modules</h2>
+                <p id="totalCount" class="stat-value">0</p>
+            </div>
+            <div class="stat-card">
+                <h2>Avg Performance</h2>
+                <p id="avgScore" class="stat-value">0%</p>
+            </div>
+            <div class="stat-card">
+                <h2>Completed Tasks</h2>
+                <p id="completedCount" class="stat-value">0</p>
+            </div>
+        </section>
+
+        <!-- Dynamic Data Controls: Search, Filter, Sort -->
+        <section class="controls-section" aria-labelledby="controls-heading">
+            <h2 id="controls-heading" class="sr-only">Data Controls</h2>
+            
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label for="searchInput">Search Modules:</label>
+                    <input type="search" id="searchInput" placeholder="Search by title..." aria-label="Search modules by title">
+                </div>
+
+                <div class="control-group">
+                    <label for="categoryFilter">Filter Category:</label>
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="All">All Categories</option>
+                        <option value="Layout">Layout</option>
+                        <option value="Components">Components</option>
+                        <option value="Accessibility">Accessibility</option>
+                        <option value="Performance">Performance</option>
+                        <option value="Full Application">Full Application</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="sortSelect">Sort By Score:</label>
+                    <select id="sortSelect" aria-label="Sort options">
+                        <option value="default">Default Order</option>
+                        <option value="high">Highest Score First</option>
+                        <option value="low">Lowest Score First</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Data Table -->
+        <section class="table-section" aria-labelledby="table-heading">
+            <h2 id="table-heading">Project Metrics Data</h2>
+            
+            <div class="table-wrapper">
+                <table class="data-table" role="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Module Title</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Performance Score</th>
+                            <th scope="col">Last Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Dynamically populated via JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Live Status Announcer for Screen Readers -->
+            <div id="statusAnnouncer" class="status-msg" role="status" aria-live="polite"></div>
+        </section>
+
+    </main>
+
+    <footer class="app-footer" role="contentinfo">
+        <p>&copy; 2026 DevAnalytics Mini Web Application. Junior Frontend Developer Internship Capstone.</p>
+    </footer>
+
+</body>
+</html>
